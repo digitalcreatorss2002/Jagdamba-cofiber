@@ -1,0 +1,447 @@
+.about {
+  padding-top: 125px;
+}
+
+/* About Hero */
+.about-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: var(--section-space-md) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 38%),
+    radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 42%);
+  pointer-events: none;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Company Story */
+.company-story {
+  padding: var(--section-space) 0;
+  background: white;
+}
+
+.story-content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.story-text h2 {
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.about-infra-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.about-infra-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.infra-icon {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--secondary-color);
+  background: linear-gradient(140deg, rgba(52, 147, 191, 0.22) 0%, rgba(201, 162, 39, 0.22) 100%);
+  border: 1px solid rgba(0, 75, 125, 0.2);
+}
+
+/* Our Operations – image slots for real warehouse, cotton yard, container loading, office/team */
+.operations-section {
+  padding: var(--section-space-md) 0;
+  background: var(--bg-light);
+}
+
+.operations-section .section-title {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.7rem;
+  padding: 0.38rem 1rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-gold-dark);
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.2) 0%, rgba(52, 147, 191, 0.15) 100%);
+  border: 1px solid rgba(201, 162, 39, 0.35);
+}
+
+.operations-section .container,
+.our-approach .container,
+.values .container {
+  text-align: center;
+}
+
+.operations-intro {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.operations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.operations-photo {
+  margin: 0;
+}
+
+.operations-photo-frame {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e8eef2;
+  box-shadow: 0 8px 22px rgba(0, 75, 125, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.operations-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.operations-photo:hover .operations-photo-frame {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 75, 125, 0.18);
+}
+
+.operations-photo:hover .operations-photo-img {
+  transform: scale(1.05);
+}
+
+.operations-photo-caption {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .operations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Our Approach */
+.our-approach {
+  padding: var(--section-space-md) 0;
+  background: var(--bg-light);
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.approach-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(52, 147, 191, 0.1);
+}
+
+.approach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(52, 147, 191, 0.2);
+}
+
+.approach-card h3 {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.approach-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--secondary-color), var(--primary-color));
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  flex: 0 0 42px;
+}
+
+/* Buyer Relations */
+.buyer-relations {
+  padding: var(--section-space-md) 0;
+  background: white;
+}
+
+.relations-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.relations-content h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.relations-content p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+/* Management & Future */
+.management-future {
+  padding: var(--section-space-md) 0;
+  background: var(--bg-light);
+}
+
+.management-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.management-text h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.management-text p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+/* Values */
+.values {
+  padding: var(--section-space-md) 0;
+  background: white;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.value-item {
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(52, 147, 191, 0.1);
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  background: white;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 auto 1rem;
+  box-shadow: 0 8px 18px rgba(52, 147, 191, 0.32);
+}
+
+.value-item h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.value-item p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .about-hero,
+  .company-story,
+  .operations-section,
+  .our-approach,
+  .buyer-relations,
+  .management-future,
+  .values {
+    padding: var(--section-space-sm) 0;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .story-content {
+    text-align: center;
+  }
+
+  .story-text {
+    text-align: center;
+  }
+
+  .story-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .operations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .relations-content h2,
+  .management-text h2 {
+    font-size: 2rem;
+  }
+
+  .approach-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .approach-card,
+  .value-item {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .management-content {
+    text-align: center;
+  }
+
+  .management-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .operations-grid {
+    grid-template-columns: 1fr;
+  }
+}
